@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <script type="text/javascript" src="domwindow.js"></script>
+  </head>
+  <body
+    style="font-family: Verdana, sans-serif; font-size: 15px; line-height: 1.5"
+  >
+    <h1>Difference between DOM and Windows in Javascript</h1>
+    <h3>What is Windows?</h3>
+    <p>
+      The window object is the topmost object of the DOM hierarchy. It
+      represents a browser window or frame that displays the contents of the
+      webpage. Whenever a window appears on the screen to display the contents
+      of the document, the window object is created.
+    </p>
+    <p>Window Properties:</p>
+    <p>window.property_name;</p>
+    <p>Example: window.innerWidth;</p>
+    <p>Methods of Windows:</p>
+    <p>window.method_name;</p>
+    <p>Example: window.setTimeout();</p>
+
+    <h1>You are Testing Saranya's Window Object</h1>
+    <button onclick="show()">Check</button>
+    <p id="prop"></p>
+
+    <h3>What is Document/DOM(Document object model)?</h3>
+    <p>
+      A document is an object inside the window object and we use a document
+      object for manipulation inside the document.
+    </p>
+    <p>
+      The first thing that gets loaded into the browser is the window and the
+      properties related to that window are stored in the window object.
+      Properties related to window objects are length, innerWidth, innerHeight,
+      caches, etc. After the window gets loaded then there’s a document (HTML,
+      PHP, or another document) loaded inside that window, and the properties
+      related to that document is stored in the document object
+    </p>
+    <p>Document Properties:</p>
+    <p>document.propertyname;</p>
+    <p>Example: document.domain;</p>
+    <p>Methods of Document:</p>
+    <p>document.method_name;</p>
+    <p>Example: document.getElementById();</p>
+
+    <table border="1px solid #dfd">
+      <thead>
+        <tr>
+          <th>
+            <h4 style="text-align: center"><strong>Document&nbsp;</strong></h4>
+          </th>
+          <th>
+            <h4 style="text-align: center"><strong>Window&nbsp;</strong></h4>
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            It represents the document loaded inside the window or browser.
+          </td>
+          <td>
+            It represents the browser window in which you are seeing the
+            content.
+          </td>
+        </tr>
+        <tr>
+          <td>
+            The properties related to it are stored in the document object.
+          </td>
+          <td>The properties related to it are stored in the window object.</td>
+        </tr>
+        <tr>
+          <td>
+            It is loaded after the loading window because the window contains a
+            document.
+          </td>
+          <td>
+            It is loaded before the document because window container document.
+          </td>
+        </tr>
+        <tr>
+          <td>It is the root element of the document object model.</td>
+          <td>
+            The window is the global element for all objects, functions, etc.
+          </td>
+        </tr>
+        <tr>
+          <td>It is an object of window.</td>
+          <td>It is an object of the browser.</td>
+        </tr>
+        <tr>
+          <td>
+            We can not access windows objects properties inside the document.
+          </td>
+          <td>We can access document object properties inside the window.</td>
+        </tr>
+        <tr>
+          <td>
+            <p>logically:</p>
+            <p>document:{ properties}</p>
+          </td>
+          <td>
+            <p>logically:</p>
+            <p>
+              &nbsp; &nbsp; window:{<br />&nbsp; &nbsp; &nbsp; &nbsp;
+              document:{properties}<br />&nbsp; &nbsp; }
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td>Example: document.title will return the title of the document</td>
+          <td>
+            Example: window.document.title will return the title of the
+            document.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
