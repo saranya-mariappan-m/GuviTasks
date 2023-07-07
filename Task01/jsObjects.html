@@ -1,0 +1,41 @@
+<html>
+  <body
+    style="font-family: Verdana, sans-serif; font-size: 15px; line-height: 1.5"
+  >
+    <h1>Objects in Javascript</h1>
+    <h3>What is Objects?</h3>
+    <p>
+      Objects are like arrays in Javascript which can hold different primitive
+      types of data. An object is a collection of related data and/or
+      functionality. These usually consist of several variables and functions
+    </p>
+    <p>
+      It is a common practice to declare objects with the <b>const</b> keyword.
+    </p>
+    <h3>Creating Objects in Javascript</h3>
+    <ul>
+      <li>By object literal</li>
+      <li>By creating instance of Object directly (using new keyword)</li>
+      <li>By using an object constructor (using new keyword)</li>
+    </ul>
+    <h3>1) JavaScript Object by object literal</h3>
+    <p>object={property1:value1,property2:value2.....propertyN:valueN}</p>
+    <p>Example: const emp={id:102,name:"Shyam Kumar",salary:40000}</p>
+    <h3>2) By creating instance of Object</h3>
+    <p>var objectname=new Object();</p>
+    <p>
+      Example: var emp=new Object(); emp.id=101; emp.name="Ravi Malik";
+      emp.salary=50000;
+    </p>
+    <h3>3) By using an Object constructor</h3>
+    <p>
+      create function with arguments. Each argument value can be assigned in the
+      current object by using <strong>this</strong> keyword.
+    </p>
+    <p>The <strong>this</strong> keyword refers to the current object.</p>
+    <p>
+      Example: function emp(id,name,salary){ this.id=id; this.name=name;
+      this.salary=salary; } e=new emp(103,"Vimal Jaiswal",30000);
+    </p>
+  </body>
+</html>
