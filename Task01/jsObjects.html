@@ -44,5 +44,13 @@
     <p>Example: person.age</p>
     <p>Built in Objects</p>
     <p>Example: const currentDate = new Date();</p>
+
+    <h3>Internal Representation of Objects</h3>
+    If we create a Object, const obj = {'a':1;'b':2}; When we compile the code
+    either on browser or on Node, At first memory is not allocated for obj
+    constant, If we asssigned it as 'var' then the memory would be allocated on
+    the Global Frame/Scope. Once we execute the initialized const obj, then the
+    memory is allocated for the obj with referencing the scope object for a = 1
+    and b = 2. Global scope will be persisting. Functional scope is volatile.
   </body>
 </html>
