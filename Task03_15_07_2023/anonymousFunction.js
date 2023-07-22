@@ -171,51 +171,45 @@
  * @returns {number} median
  */
 
-// const arrayOne = [3, 4, 5, 1, 2];
+// const arrayOne = [23, 14, 5, 61];
 // const arrayTwo = [8, 10, 6, 9, 7];
 
 // const getMedian = function (inputArr, compareArr) {
+// // Entire logic will work only 2 array has same size.
+// // If need to check for 2 different size array then comment the IF CASE
+// // and keep only ELSE.
 //   if (inputArr.length !== compareArr.length) {
 //     console.log(inputArr);
 //     console.log(compareArr);
 //     console.log("false");
 //     return false;
 //   } else {
-//     let i = 0;
-//     while (i < 2) {
-//       inputArr = inputArr.sort(function (a, b) {
-//         return a - b;
-//       }); // Since the Sorting of 6,7,8,9,10 return 10 as first, considering 1 is lowest value.
+//     let median = 0;
+//     const inputArr2 = [...inputArr, ...compareArr];
+//     inputArr2.sort(function (a, b) {
+//       return a - b;
+//     });
+//       // Since the Sorting of 6,7,8,9,10 return 10 as first, considering 1 is lowest value.
+//     let n = Math.floor(inputArr2.length / 2);
 
-//       let n = Math.floor(inputArr.length / 2);
-//       console.log(inputArr);
-//       let median = 0;
-//       if (inputArr.length % 2 === 0) {
-//         median = (inputArr[n - 1] + inputArr[n]) / 2;
-//       } else {
-//         median = inputArr[n] / 2;
-//       }
-//       inputArr = [];
-//       inputArr = compareArr;
-//       i++;
-//       console.log(median);
+//     if (inputArr2.length % 2 === 0) {
+//       median = (inputArr2[n - 1] + inputArr2[n]) / 2;
+//     } else {
+//       median = inputArr2[n];
 //     }
-//   }
+//     console.log('Median',median);
+//  }
 // };
 // getMedian(arrayOne, arrayTwo);
 
 // Outputs
-// 1.5
-// 4
+// [ 23, 14, 5, 61, 82 ]
+// [ 8, 10, 6, 9, 7 ]
+// Median 9.5
 
-//[ 1, 2, 3, 4, 5, 6 ]
-// 3.5
-// [ 5, 6, 7, 8, 9, 10 ]
-// 7.5
-
-//[ 3, 4, 5, 1, 2 ]
-// [ 8, 10, 6, 9 ]
-// false
+// [ 23, 14, 5, 61 ]
+// [ 8, 10, 6, 9, 7 ]
+// Median 9
 
 // 7. Remove duplicates from an array
 

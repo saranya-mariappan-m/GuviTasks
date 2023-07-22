@@ -1,0 +1,26 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+}
+.form-item{
+    margin: 30px;
+}
+.form-item input{
+    line-height: 2em;
+}
+.form-item span{
+    color:red;
+}
+.form-item .btn{
+    color:cornflowerblue;
+    line-height: 2em;
+    border-radius: 2px;
+    padding: 5px;
+    border: none;
+    min-width: 7%;
+    font-weight: 700;
+
+}
+ul li ol.ol-alpha{
+    list-style-type: lower-alpha;
+}
