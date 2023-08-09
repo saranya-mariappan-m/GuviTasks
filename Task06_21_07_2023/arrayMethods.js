@@ -27,25 +27,15 @@ xhr.onload = function () {
 
   // d) Print the total population of countries using reduce function
 
-// const population = countries.reduce((accumulator, currentValue,currentIndex) => {
+// const population = countries.reduce((accumulator = 0, currentValue) => {
 //   console.log(currentValue.name.common,currentValue.population);
-//  // accumulator['countryname'].push(currentValue.name.common); // Need Clarification on building the new array object.
-//   accumulator.push(currentValue.population);
+//   accumulator = accumulator + parseInt(currentValue.population);
 //    return accumulator;
-// },[]
+// }
 // );
 
-// console.log(population);
+//  console.log(population);
   // e) Print the country which uses US Dollars as currency.
-  // const USDCountries = countries.reduce(function (accumulator, currentValue, currentIndex) {
-  //   if(currentValue.currencies != undefined){
-  //     if (currentValue.currencies.USD != undefined ) {
-  //           accumulator.push(currentValue);
-  //         }
-  //   }
-  //    return accumulator;
-  // }, []);
-
-  // console.log(USDCountries);
+ // console.log(countries.filter((country) => Object.keys(country.currencies || {}).includes('USD')));
 }
 xhr.send();

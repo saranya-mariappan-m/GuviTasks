@@ -1,6 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Contact Us</title>
         <h1>Contact Us</h1>
         <link href="contactus.css" rel="stylesheet">
@@ -9,13 +11,13 @@
         <form id="contact_us" class="form contact_us">
             <h2>Contact us for more support</h2>
             <div class="form-item name">
-                <label value="Name">Name</label><span>*</span>
-                <input type="text" size="60" value="" required="true">
+                <label for="name">Name</label><span>*</span>
+                <input type="text" size="60" name="name" value="" required />
 
             </div>
             <div class="form-item mail">
-                <label value="Email">Email</label><span>*</span>
-                <input type="text" size="60" value="" required="true">
+                <label for="email">Email</label><span>*</span>
+                <input type="email" size="60" name="email" value="" required="true">
 
             </div>
             <div class="form-item phone">
@@ -42,20 +44,20 @@
             <li>Programming Language
                 <ul>
                   <li>JavaScript
-                    <ol class="ol-alpha">
+                    <ol type="a">
                         <li>Angular</li>
                         <li>React</li>
                         <li>Vue.js</li>
                     </ol>
                   </li>
                   <li>Python
-                    <ol class="ol-alpha">
+                    <ol type="a">
                         <li>Django Framework</li>
                         <li>Flask Framework</li>
                     </ol>
                   </li>
                   <li>Java
-                    <ol class="ol-alpha">
+                    <ol type="a">
                         <li>Spring</li>
                         <li>Maven</li>
                         <li>Hibernate</li>
@@ -75,5 +77,11 @@
     <a href = "https://google.com" target="_blank">Click Here to open in new Tab</a>
     <p>Use the table tag to design</p>
     <p>Source: <img src="https://www.bapugraphics.com/assets/img/port_upload_dir/table-4.jpg" /></p>
+    <table border:1px>
+        <thead>
+           <tr>Name Age Role</tr>
+           <th>Name Age Role</th>
+        </thead>
+    </table>
    </body>
 </html>
