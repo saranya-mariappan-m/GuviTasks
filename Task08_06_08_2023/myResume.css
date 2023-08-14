@@ -1,8 +1,24 @@
+html, body, div, span, header,p,img,section, aside,ul,li {
+    margin: 0;
+    padding: 0;
+    border:0;
+    font-size:inherit;
+    vertical-align: baseline;
+    font-family: sans-serif;
+
+}
+body {
+    min-height: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
 .wrapper {
-    margin: 0 20%;
+    margin: 0 15%;
+    height: 100%;
 }
 header {
     background-color: #565656;
+    display: block;
 }
 header .banner {
     display: flex;
@@ -11,17 +27,25 @@ header .banner {
 }
 header .profile_name {
     background-color: #FABE28;
-    width: 100%;
+    width: auto;
     text-align: center;
+    padding: 2px 45px;
+    border-radius: 5px;
+    position: absolute;
+    margin-top: 250px;
 }
 header .banner span{
     background-color: #EEEEEE;
+    min-height: 40px;
+    width: 100%;
+    margin-top: -10px;
 }
 header .banner img{
     border-radius: 50%;
     border: 5px dotted #FABE28 ;
     max-width: 100%;
     height: auto;
+    margin-top: 40px;
 }
 header .profile_name .name {
     text-transform: uppercase;
@@ -29,32 +53,200 @@ header .profile_name .name {
     font-size: 4em;
     color: #2B2414;
 }
-
-.contact_info {
-    position: relative;
-    margin: 1em;
-    overflow: hidden;
+header .gray_bg {
+    background-color: #565656;
+    min-height: 35px;
+    width: 100%;
 }
+
 .contact_info ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    margin-top:0;
     margin-left: -1px;
+    margin-bottom: 10px;
     list-style: none;
+    padding: 2px 0;
+    background-color: #FFFFFF;
+    border-bottom: 2px solid #D9D9D9;
 }
 .contact_info li {
-    flex-grow: 1;
-    flex-basis: auto;
-    margin: .25em 0;
-    padding: 0 1em;
+    margin: 0.25em 0;
+    padding: 0 0.5em;
     text-align: center;
     border-left: 1px solid #ccc;
-    /* background-color: #fff; */
 }
+.contact_info li:first-child {
+    border: none;
+}
+.section_icon{
+    border: 5px dotted #FABE28 ;
+    min-height: 50px;
+    min-width: 50px;
+    border-radius: 50%;
+    display: inline-block;
+}
+.section_icon span{
+    display: inline-block;
+    background-color: #565656;
+    min-height: 50px;
+    min-width: 50px;
+    border-radius: 50%;
+    text-align: center;
+    height: 50px;
+    line-height: 55px;
+    vertical-align: middle;
+}
+.section_icon .fa{
+    font-size:24px;
+    color: #FABE28;
+}
+aside{
+    display: inline-block;
+    min-width: 45%;
+    margin-left: 40px;
+    min-height: 1000px;
+}
+aside .block{
+    position: absolute;
+}
+#sidebar-first{
+    border-right: 2px solid #D9D9D9;
+}
+#sidebar-second{
+    min-width: calc(43% - 10px);
+}
+.resume_sections {
+    width: 420px;
+}
+.resume_sections .section_title{
+    display: inline-block;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+    margin-left: 5px;
+    color:#5D5D5D;
+}
+
+.tech_title {
+    text-align: center;
+    font-weight: 600;
+}
+.tech_items {
+    display: flex;
+    margin: 10px 0;
+}
+.tech_items .item{
+    flex:1;
+}
+.role {
+    font-weight: 600;
+    display: inline;
+}
+.duration {
+    float: right;
+}
+.project_desc {
+    margin-top:10px;
+}
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+  }
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 10px; /* Specified height */
+    background: -webkit-linear-gradient(
+    to right,
+    #FBC12F,
+    #EDEDED  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #FBC12F,
+    #EDEDED
+  ); /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #FFFFFF;
+    cursor: pointer;
+    border: 2px solid #d9d9d9;
+    border-radius: 50%;
+  }
+
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #FFFFFF;
+    cursor: pointer; /* Cursor on hover */
+    border: 2px solid #d9d9d9;
+    border-radius: 50%;
+  }
+
+
 @media screen and (max-width: 1000px){
     header .banner img {
         max-width: calc(100% - 10px);
         height: auto;
      }
+     header .profile_name {
+    width: 30%;
+    display: inline-block;
+    }
+    header .profile_name .name{
+        font-size: 22px;
+        font-weight:600;
+    }
+    #sidebar-first {
+        border:0;
+        min-height: 1300px;
+        overflow: visible;
+    }
+    aside {
+        position: relative;
+        display: block;
+    }
+    .resume_sections {
+        max-width: 50%;
+    }
+}
+@media screen and (min-width:768px) and (max-width: 1000px) {
+    header .banner img {
+        max-width: calc(100% - 10px);
+        height: auto;
+     }
+     header .profile_name {
+    width: 30%;
+    display: inline-block;
+    }
+    header .profile_name .name{
+        font-size: 22px;
+        font-weight:600;
+    }
+    #sidebar-first {
+        border:0;
+        min-height: 1300px;
+        overflow: visible;
+    }
+    aside {
+        position: relative;
+        display: block;
+    }
+    .resume_sections {
+        max-width: 50%;
+    }
 }

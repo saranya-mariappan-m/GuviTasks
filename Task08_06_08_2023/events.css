@@ -1,0 +1,10 @@
+.container img{
+    height: 250px;
+    width: 250px;
+}
+.container .img-wrapper {
+    width: 350px;
+}
+input,select, select:focus, input:focus-visible, select:focus-visible, select:focus-within, select:active {
+    border: 2px solid var(--bs-primary-border-subtle) !important;
+}
